@@ -18,7 +18,7 @@ public class CourseService {
 	CourseRegistryRepo courseRegistryRepo;
 	
 	public List<Course> getCourses() {
-		// TODO Auto-generated method stub
+		
 		return courseRepo.findAll();
 	}
 	public List<CourseRegistry> getStudents() {
@@ -27,7 +27,7 @@ public class CourseService {
 		
 	}
 	public String enroll(String name, String mail, String cname) {
-		// TODO Auto-generated method stub
+		
 		CourseRegistry courseRegistry = new CourseRegistry(name,mail,cname);
 		courseRegistryRepo.save(courseRegistry);
 		return "Congratulations, " + name + ", for enrolling in the " + cname + " course!"
