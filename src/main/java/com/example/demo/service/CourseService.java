@@ -1,10 +1,8 @@
 package com.example.demo.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.demo.model.Course;
 import com.example.demo.model.CourseRegistry;
 import com.example.demo.repository.CourseRegistryRepo;
@@ -28,11 +26,12 @@ public class CourseService {
 		return courseRegistryRepo.findAll();
 		
 	}
-	public String enroll(String cname, String mail, String name) {
+	public String enroll(String name, String mail, String cname) {
 		// TODO Auto-generated method stub
-		CourseRegistry courseRegistry = new CourseRegistry(cname,mail,name);
+		CourseRegistry courseRegistry = new CourseRegistry(name,mail,cname);
 		courseRegistryRepo.save(courseRegistry);
-		return "enrolled";
+		return "Congratulations, " + name + ", for enrolling in the " + cname + " course!"
+;
 	}
 
 }

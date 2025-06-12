@@ -1,18 +1,18 @@
 package com.example.demo.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.example.demo.model.Course;
 import com.example.demo.model.CourseRegistry;
 import com.example.demo.service.CourseService;
 
 @RestController
+@CrossOrigin(origins=("http://127.0.0.1:5500"))
 public class CourseController {
 	
 	@Autowired
@@ -31,8 +31,8 @@ public class CourseController {
 	}
 	
 	@PostMapping("courses/enroll")
-	public String enroll(@RequestParam("courseName")String cname,@RequestParam("emailId")String mail,@RequestParam("name")String name)
+	public String enroll(@RequestParam("name")String name,@RequestParam("emailId")String mail,@RequestParam("courseName")String cname)
 	{
-		return courseService.enroll(cname,mail,name);
+		return courseService.enroll(name,mail,cname);
 	}
 }

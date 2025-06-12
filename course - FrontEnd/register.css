@@ -1,0 +1,53 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width:100wh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background:linear-gradient(135deg ,rgb(212, 35, 228),rgb(216, 200, 218));
+}
+.container{
+    height:550px;
+    width: 500px;
+    background-color: rgb(240, 192, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.ip{
+    margin:15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;  
+}
+
+
+.ip input,select{
+    width:250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+.ip input:focus,select:focus{
+    outline: none;
+    border-color: #6c63ff;
+}
+button{
+    cursor: pointer;
+    padding:6px;
+    width:100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background:linear-gradient(135deg ,rgb(212, 35, 228),rgb(216, 200, 218));
+}
+button:active{
+    background:linear-gradient(135deg ,rgb(217, 60, 231),rgb(218, 218, 218));
+}
+
+
