@@ -1,12 +1,13 @@
-package com.example.demo.service;
+package com.example.cms.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demo.model.Course;
-import com.example.demo.model.CourseRegistry;
-import com.example.demo.repository.CourseRegistryRepo;
-import com.example.demo.repository.CourseRepo;
+
+import com.example.cms.model.Course;
+import com.example.cms.model.CourseRegistry;
+import com.example.cms.repository.CourseRegistryRepo;
+import com.example.cms.repository.CourseRepo;
 
 @Service
 public class CourseService {
